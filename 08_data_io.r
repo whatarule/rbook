@@ -1,0 +1,15 @@
+
+source("install.r")
+init()
+
+pacman::p_load(dplyr, tidyverse, haven)
+
+my_df1 <- read.csv("github/Data/FIFA_Women.csv")
+my_df1 %>% head(3)
+my_df1 %>% tail(3)
+
+sjis_df1 <- read.csv("github/Data/Vote_ShiftJIS.csv", fileEncoding = "cp932")
+sjis_df1 %>% head(3)
+
+
+write.csv(my_df1, file = "data/FIFA_Women.csv", row.names = FALSE)
