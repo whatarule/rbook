@@ -1,0 +1,15 @@
+
+```{r, echo = FALSE}
+source("install.r")
+init()
+
+Sys.getenv("TERM_PROGRAM")
+Sys.setenv(TERM_PROGRAM = "vscode")
+Sys.getenv("TERM_PROGRAM")
+Sys.setenv(TERM_PROGRAM = "")
+Sys.getenv("TERM_PROGRAM")
+
+source("17_visualise.r")
+
+rmarkdown::run("rstudio.rmd")
+```

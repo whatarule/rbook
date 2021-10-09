@@ -1,0 +1,21 @@
+
+##### 17_visualise
+
+```{r echo = FALSE}
+source("init.r")
+init()
+
+country_df <- read.csv("github/Data/countries.csv")
+country_df %>% head(3)
+
+plot(
+  x = country_df$PPP, y = country_df$HDI, pch = 19,
+  col = ifelse(country_df$OECD == "加盟国", "red", "blue"),
+  xlab = "GDP (USD)/p", ylab = "ningen"
+)
+legend("bottomright",
+  pch = 19,
+  legend = c("OECD", "not OECD"),
+  col = c("red", "blue")
+)
+```

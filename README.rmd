@@ -1,0 +1,8 @@
+
+
+### vscode-r
+* [Envirnment variables below must be set in your terminal](https://stackoverflow.com/a/29710643)
+```
+  # with the value from Rstudio: Sys.getenv("RSTUDIO_PANDOC")
+  export RSTUDIO_PANDOC="/Applications/RStudio.app/Contents/MacOS/pandoc"
+```
